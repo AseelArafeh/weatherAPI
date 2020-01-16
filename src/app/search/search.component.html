@@ -1,1 +1,6 @@
-  <img class="" src="../../assets/home.png" alt="" [routerLink]="'/home'"/> 
+<img class="" src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
+
+<input placeholder="City Name" [(ngModel)]="name">
+<div *ngFor="let day of weatherForAroundCities?.list | search:name; index as i" >
+	<app-next-days-item  [nextDayForcast]="day"></app-next-days-item>
+</div>

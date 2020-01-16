@@ -9,6 +9,8 @@ import { WeatherViewComponent } from './weather-view/weather-view.component';
 import { HttpClientModule} from '@angular/common/http';
 import { NextDaysItemComponent } from './next-days-item/next-days-item.component';
 import { SearchComponent } from './search/search.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { FormsModule } from '@angular/forms';  //<<<< import it here
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { SearchComponent } from './search/search.component';
     WeatherItemComponent,
     WeatherViewComponent,
     NextDaysItemComponent,
-    SearchComponent
+    SearchComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+	HttpClientModule,
+	FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
