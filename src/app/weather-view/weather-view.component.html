@@ -1,1 +1,18 @@
-<p>weather-view works!</p>
+<img class="" src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
+<div class="">
+    <p>{{currentView?.main?.temp}}</p>
+</div>
+<div class="">
+	<p>Description : {{currentView?.weather[0]?.description}}</p>
+</div>
+<div class="">
+	<p>Humidity : {{currentView?.main?.humidity}}</p>
+</div>
+<div class="">
+	<p>Pressure : {{currentView?.main?.pressure}}</p>
+</div>
+<div class="">
+	<img class="" src="http://openweathermap.org/img/wn/{{currentView?.weather[0]?.icon}}@2x.png" alt=""/>
+</div>
+
+

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { weather } from './weather';
 import { Observable } from 'rxjs';
 
@@ -9,9 +9,38 @@ import { Observable } from 'rxjs';
 export class WeatherService {
 
   constructor(private http: HttpClient) { }
-// try casting for string :)
-  getWeathers(): Observable<weather> {
-    // use postMan tool
-    return this.http.get<weather>("https://api.openweathermap.org/data/2.5/weather?q=Hebron&APPID=27451e4cd5a755ebd71d3046d1d036fe");
+
+  readonly ROOT_URL = 'https://api.openweathermap.org/data/2.5/weather?';
+  appID = '27451e4cd5a755ebd71d3046d1d036fe';
+
+  getCurrentLocation() {
+
   }
+
+  getTodayForcast (lat: number, lng: number) {
+    let params = new HttpParams();
+    params = params.set('lat', lat.toString());
+    params = params.set('lon', lng.toString());
+    params = params.set('APPID', this.appID);
+    return this.http.get(this.ROOT_URL, { params });
+  }
+
+  getNextFiveDaysForcast (lat: number, lng: number) {
+    let params = new HttpParams();
+    params = params.set('lat', lat.toString());
+    params = params.set('lon', lng.toString());
+    params = params.set('APPID', this.appID);
+    return this.http.get('https://api.openweathermap.org/data/2.5/forecast?', { params });
+
+  }
+
+  getAroundDetails (lat: number, lng: number) {
+    let params = new HttpParams();
+    params = params.set('lat', lat.toString());
+    params = params.set('lon', lng.toString());
+    params = params.set('cnt', '20');
+    params = params.set('APPID', this.appID);
+    return this.http.get('https://api.openweathermap.org/data/2.5/find?', { params });
+  }
+
 }
