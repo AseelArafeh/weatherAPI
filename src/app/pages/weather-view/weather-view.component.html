@@ -1,0 +1,26 @@
+<div class="header" >
+	<img class="icon header-icon" src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
+</div>
+
+<div class="description flex-row">
+	<span>
+		<div class="padding">
+			<p>Temperature: {{currentView?.main?.temp - 273.2 | number: 0.00}}°</p>
+		</div>
+		<div class="padding">
+			<p>Humidity : {{currentView?.main?.humidity}}</p>
+		</div>
+	</span>
+	<span>
+		<div class="padding">
+			<p>Description : {{currentView?.weather[0]?.description}}</p>
+		</div>
+		<div class="padding">
+			<p>Pressure : {{currentView?.main?.pressure}}</p>
+		</div>
+	</span>
+	<div>
+		<img src="http://openweathermap.org/img/wn/{{currentView?.weather[0]?.icon}}@2x.png" alt=""/>
+	</div>
+</div>
+

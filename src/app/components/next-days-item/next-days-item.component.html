@@ -1,0 +1,5 @@
+<div class="flex-row">
+	<p class="next-day-text">{{nextDayForcast?.dt_txt | date}}</p>
+	<img class="weather-icon" src="http://openweathermap.org/img/wn/{{nextDayForcast?.weather[0]?.icon}}@2x.png" alt=""/>
+	<p class="next-day-text">{{nextDayForcast?.main?.temp - 273.2 | number: 0.00}}°</p>
+</div>

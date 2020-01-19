@@ -5,7 +5,7 @@
 </div>
 <app-weather-item [todayForecast]="weatherForToday"></app-weather-item>
 <div *ngFor="let day of weatherForComingDays.list; index as i" >
-  <div class="border next-day" *ngIf="i >= 1 && i%8  == 0">
+  <div class="border next-day next-day-margin" *ngIf="i >= 1 && i%8  == 0">
 	<img class="icon " src="../../assets/question_mark.png" alt="" [routerLink]="['/weatherview', i/8, lat, lng ]"/>
 	<app-next-days-item [nextDayForcast]="day"></app-next-days-item>
   </div>

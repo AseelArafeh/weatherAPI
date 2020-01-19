@@ -8,8 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NextDaysItemComponent implements OnInit {
 
   constructor() { }
+
   @Input() nextDayForcast;
-  //@Input() idx;
+
   ngOnInit() {
   }
 

@@ -1,5 +1,5 @@
 <div class="header" >
-	<img class="icon " src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
+	<img class="icon header-icon" src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
 </div>
 <div class="flex-row">
 	<input placeholder="City Name" [(ngModel)]="name" >
@@ -8,7 +8,7 @@
 <div *ngFor="let day of weatherForAroundCities?.list | search:name; index as i" >
 
 	<div class="flex-row">
-		<span>{{day?.name}}</span>
+		<span class="search-text">{{day?.name}}</span>
 		<app-next-days-item  [nextDayForcast]="day" ></app-next-days-item>
 	</div>
 	<hr>

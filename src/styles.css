@@ -1,6 +1,7 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	box-sizing: border-box;
+	outline: none;
 }
 
 html, body {
@@ -13,14 +14,18 @@ html, body {
 	background-color: rgb(8, 117, 112);
 }
 
+.header-icon {
+	margin-left: 50px;
+}
+
 .title {
 	font-size: 50px;
 	color: white;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	margin-top: auto;
 	padding: 15px;
-
 }
+
 .icon {
 	cursor: pointer;
 	width: 70px;

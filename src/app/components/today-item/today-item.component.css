@@ -4,22 +4,31 @@
 	width: 80%;
 	margin: auto;
 }
+
 .today-title {
 	font-size: 50px;
 }
+
 .today-description {
 	font-size: 22px;
 }
+
+.today {
+	margin: 1% 10% 1% 10%;
+	box-shadow: 3px 4px #a8a6a1
+
+}
+
 .flex-today {
 	display: flex;
-	width: 35%;
+	width: 70%;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.flex-item1 {
-	width: 1000px;
+img {
+	width: 40%;
 }
 
 .flex-item2 {

@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { weather } from './weather';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +10,6 @@ export class WeatherService {
 
   readonly ROOT_URL = 'https://api.openweathermap.org/data/2.5/weather?';
   appID = '27451e4cd5a755ebd71d3046d1d036fe';
-
-  getCurrentLocation() {
-
-  }
 
   getTodayForcast (lat: number, lng: number) {
     let params = new HttpParams();
