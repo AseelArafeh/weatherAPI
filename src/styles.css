@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	background-color: #e7e7e7;
+	margin: 0px;
+}
+
+.header {
+	background-color: rgb(8, 117, 112);
+}
+
+.title {
+	font-size: 50px;
+	color: white;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin-top: auto;
+	padding: 15px;
+
+}
+.icon {
+	cursor: pointer;
+	width: 70px;
+}
+
+.border {
+	border-radius: 25px;
+	border-style: double;
+	margin: auto;
+	width: 80%;
+	border-color: #838285;
+}
+
+.hover :hover {
+	background-color: gray;
+}
+
+.flex-row {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	justify-items: center;
+}
+.weather-icon {
+	width: 125px;
+}

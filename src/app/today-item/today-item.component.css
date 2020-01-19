@@ -1,0 +1,29 @@
+* {
+	background-color: orange;
+	color: white;
+	width: 80%;
+	margin: auto;
+}
+.today-title {
+	font-size: 50px;
+}
+.today-description {
+	font-size: 22px;
+}
+.flex-today {
+	display: flex;
+	width: 35%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-item1 {
+	width: 1000px;
+}
+
+.flex-item2 {
+	font-size: 70px;
+}
+
+

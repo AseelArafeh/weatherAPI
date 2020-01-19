@@ -1,13 +1,13 @@
-<div>
-  <img class="" src="../../assets/question_mark.png" alt="" [routerLink]="['/weatherview', 0, lat, lng ]"/>
-  <span class="">Weather App</span>
-  <img class="" src="../../assets/search.png" alt="" [routerLink]="'/search'"/>
+<div class="flex-row header" >
+  <img class="icon " src="../../assets/question_mark.png" alt="" [routerLink]="['/weatherview', 0, lat, lng ]"/>
+  <span class="title">Weather App</span>
+  <img class="icon " src="../../assets/search.png" alt="" [routerLink]="'/search'"/>
 </div>
 <app-weather-item [todayForecast]="weatherForToday"></app-weather-item>
 <div *ngFor="let day of weatherForComingDays.list; index as i" >
-  <div *ngIf="i >= 1 && i%8  == 0">
-    <img class="" src="../../assets/question_mark.png" alt="" [routerLink]="['/weatherview', i/8, lat, lng ]"/>
-    {{i/8}}<app-next-days-item [nextDayForcast]="day"></app-next-days-item>
+  <div class="border next-day" *ngIf="i >= 1 && i%8  == 0">
+	<img class="icon " src="../../assets/question_mark.png" alt="" [routerLink]="['/weatherview', i/8, lat, lng ]"/>
+	<app-next-days-item [nextDayForcast]="day"></app-next-days-item>
   </div>
 </div>
 

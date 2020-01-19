@@ -1,6 +1,15 @@
-<img class="" src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
-
-<input placeholder="City Name" [(ngModel)]="name">
+<div class="header" >
+	<img class="icon " src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
+</div>
+<div class="flex-row">
+	<input placeholder="City Name" [(ngModel)]="name" >
+</div>
+<hr>
 <div *ngFor="let day of weatherForAroundCities?.list | search:name; index as i" >
-	<app-next-days-item  [nextDayForcast]="day"></app-next-days-item>
+
+	<div class="flex-row">
+		<span>{{day?.name}}</span>
+		<app-next-days-item  [nextDayForcast]="day" ></app-next-days-item>
+	</div>
+	<hr>
 </div>
