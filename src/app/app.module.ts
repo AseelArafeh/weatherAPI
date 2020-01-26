@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { SearchPipe } from './pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ChangeheightDirective } from './changeheight.directive';
 
 @NgModule({
   declarations: [
@@ -19,15 +22,20 @@ import { FormsModule } from '@angular/forms';
     WeatherViewComponent,
     NextDaysItemComponent,
     SearchComponent,
-    SearchPipe
+	SearchPipe,
+	LoginComponent,
+	ChangeheightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 	HttpClientModule,
-	FormsModule
+	FormsModule,
+	ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

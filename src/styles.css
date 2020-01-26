@@ -12,6 +12,8 @@ html, body {
 
 .header {
 	background-color: rgb(8, 117, 112);
+	/* position: fixed; */
+	/* width: 100%; */
 }
 
 .header-icon {

@@ -1,4 +1,4 @@
-<div class="header" >
+<div class="header" appChangeHeight>
 	<img class="icon header-icon" src="../../assets/home.png" alt="" [routerLink]="'/home'"/>
 </div>
 <div class="flex-row">
@@ -6,7 +6,6 @@
 </div>
 <hr>
 <div *ngFor="let day of weatherForAroundCities?.list | search:name; index as i" >
-
 	<div class="flex-row">
 		<span class="search-text">{{day?.name}}</span>
 		<app-next-days-item  [nextDayForcast]="day" ></app-next-days-item>
